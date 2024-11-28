@@ -27,7 +27,7 @@ public class AppStartupRunner implements ApplicationRunner {
         Sender sender = applicationContext.getBean(Sender.class);
 
         //TODO-5 이름과 원하는 메시지를 채운다.
-        Request request = new Request(null, null);
+        Request request = new Request("dd", "DDD");
         sender.sendMessage(request);
 
         Farewell farewell = applicationContext.getBean(Farewell.class);

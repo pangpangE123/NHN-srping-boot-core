@@ -6,14 +6,16 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.springframework.stereotype.Component;
 
 import java.nio.charset.StandardCharsets;
 
 //TODO-4 DoorayWebHookSender 를 Bean 으로 등록한다.
+@Component
 public class DoorayWebHookSender implements Sender {
 
     //TODO-3 hookUrl 을 채운다.
-    String hookUrl = "";
+    String hookUrl = "https://hook.dooray.com/services/3204376758577275363/3928634944696038770/_RUztVt8RUOGsy0mlAcGbA";
 
     @Override
     public void sendMessage(Request request) {
